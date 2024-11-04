@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cruds</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cruds">
+        <div class="titele">
+            <h2>cruds</h2>
+            <p>mohamed sami</p>
+        </div>
+        <div class="inputs">
+            <input placeholder="titele" type="text" id="titele">
+            <div class="price">
+                <input onkeyup="gettotal()" placeholder="price" type="number" id="price">
+                <input onkeyup="gettotal()" type="number" placeholder="ads" id="ads">
+                <input onkeyup="gettotal()" type="number" placeholder="taxs" id="taxs">
+                <input onkeyup="gettotal()" type="number" placeholder="discount" id="discount">
+                <small id="total"></small>
+            </div>
+            <input type="number" placeholder="count" id="count">
+            <input type="text" placeholder="category" id="category">
+            <button id="create">create</button>
+        </div>
+        <div class="outputs">
+            <div class="search">
+                <input onkeyup="searchdata(this.value)" type="text" id="search" placeholder="search">
+                <div class="btnsearch">
+                    <button id = "searchtitele" onclick="getsearch(this.id)">search by titele</button>
+                    <button id = "searchcategory" onclick="getsearch(this.id)">search by category</button>
+                </div>
+                <div id="delateall">
+
+                </div>
+                <table>
+                    <tr>
+                        <th>id</th>
+                        <th>titele</th>
+                        <th>price</th>
+                        <th>ads</th>
+                        <th>taxs</th>
+                        <th>discount</th>
+                        <th>total</th>
+                        <th>category</th>
+                        <th>update</th>
+                        <th>delate</th>
+                    </tr>
+                    <tbody id="tbody">
+                      
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
